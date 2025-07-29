@@ -4,6 +4,8 @@ const PrinterTypes = require('node-thermal-printer').types;
 const app = express();
 
 app.use(express.json());
+let isConnected = await printer.isPrinterConnected();
+console.log("Status koneksi printer:", isConnected);
 
 // Ganti dengan API key jika perlu keamanan
 const API_KEY = 'secret123';
